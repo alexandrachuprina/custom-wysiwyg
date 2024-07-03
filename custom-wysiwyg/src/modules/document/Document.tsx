@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { StyledContainer } from './styles'
+import { TextArea } from './TextArea';
 
 function Document() {
+  const [value, setValue] = useState<string>('');
+
   return (
-    <div>Document</div>
+    <StyledContainer>
+      <TextArea value={value} />
+    </StyledContainer>
   )
 }
 
